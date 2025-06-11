@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+html {
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif; 
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    padding: 0px; /* ← INI YANG BIKIN ADA SPASI ATAS */
+    margin: 0; 
+} 
+
+/* ======== TOP CONTACT ======== */
+.top-contact {
+  background-color: #6d8752;
+  color: white;
+  padding: 8px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  position: relative;
+}
+
+.right-socials {
+  position: absolute;
+  top: 8px;
+  right: 20px;
+}
+.right-socials a {
+  color: white;
+  margin-left: 15px;
+  font-size: 16px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.right-socials a:hover {
+  color: #ccc;
+}
+
+/* ======== NAVBAR ======== */
+/* Navbar container */
+.navbar {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px; /* Padding atas-bawah 20px, kiri-kanan 40px */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+/* Bagian kiri dan kanan */
+.nav-left,
+.nav-right {
+  display: flex;
+}
+
+/* Hapus default list style */
+.nav-links {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Tombol navigasi umum */
+.nav-button {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.nav-button:hover {
+  background-color: #f0f0f0;
+  color: #6d8752;
+}
+
+/* Tombol khusus PPDB */
+.ppdb-btn {
+  background-color: #ffffff;
+  color: #000000 !important;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  outline: 2px solid #8a8989; 
+  outline-offset: 2px;
+}
+
+.ppdb-btn:hover {
+  background-color: #6d8752;
+}
+
+/* Responsive untuk layar kecil */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-left,
+  .nav-right {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-button, .ppdb-btn {
+    width: 100%;
+    text-align: left;
+  }
+}
+
+.logo-center {
+  position: absolute;
+  top: 10%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 100%;
+  padding: 6px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  z-index: 11;
+}
+.logo-center img {
+  height: 80px;
+}
+
+/* ======== DROPDOWN ======== */
+.navbar-left a,
+.dropbtn {
+  margin: 0 10px;
+  text-decoration: none;
+  color: black;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 150px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  z-index: 999;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  display: block;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* ======== PRESTASI SECTION BORDER ======== */
+/* ======== PRESTASI CARD LAYOUT ======== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1000px; /* Tambah sesuai kebutuhan */
+  margin: 0 auto;
+  padding: 25px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #999; /* <-- Border diperbesar */
+  border-radius: 8px;
+  width: 100%; 
+  max-width: 100%; 
+  display: flex;
+  padding: 35px;
+  gap: 30px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.card img {
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card .content {
+  flex: 1;
+}
+
+.card h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+
+
+/* ======== FOOTER ======== */
+.footer-container {
+    background-image: url('all\ in/footer.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 530px;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 16rem 5rem 0;
+    gap: 3rem;
+}
+
+.footer-container .footer-section {
+    flex: 1;
+    padding: 0 2rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-container h4 {
+    font-size: 1.3rem;
+}
+
+
+.footer-container iframe {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    min-height: 300px;
+    width: 30%;
+    margin-top: -105px;
+}
+
+.footer-container a {
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-container a:hover {
+    color: #f1c40f;
+}
+
+@media (max-width: 768px) {
+    .program-right {
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 1rem;
+    }
+
+    .program-left {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 2rem 1rem;
+    }
+
+    .footer-container {
+        padding: 19rem 5rem 8rem;
+        gap: 3rem;
+        height: auto;
+    }}
+
+.button-link {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 12px 40px;
+    border-radius: 40px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    line-height: 30px;
+    font-family: Roboto, sans-serif;
+}
+
+.button-link:hover {
+    background-color: #f0f0f0;
+}

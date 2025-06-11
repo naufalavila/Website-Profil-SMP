@@ -1,0 +1,67 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+.tab-buttons {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.tab-buttons button {
+  padding: 12px 24px;
+  margin: 0 8px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #fff;
+  border: 2px solid #fcd34d;
+  color: #333;
+  transition: 0.3s;
+}
+
+.tab-buttons .active {
+  background-color: #fcd34d;
+  color: #000;
+}
+
+.fasilitas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 20px 40px;
+}
+
+.fasilitas-item {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.fasilitas-item:hover {
+  transform: translateY(-5px);
+}
+
+.fasilitas-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.fasilitas-item h3 {
+  margin: 15px 0 10px;
+  font-size: 20px;
+  color: #222;
+}
+
+.fasilitas-item p {
+  font-size: 14px;
+  color: #555;
+}
